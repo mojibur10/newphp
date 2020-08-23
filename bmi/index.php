@@ -10,72 +10,9 @@
     <title>(BMI)</title>
   </head>
   <body>
-<div class="container">
-
-   <h1> Body Mass Index (BMI)</h1>
-
-   <div class="row">
 
 
-   	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-   	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-   	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-   	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-   	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-   	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-      <div class="col-md-6 ">
-            <form action=""  method="post" >
-
-                <label for="uname">Username:</label>
-                <input type="tex" name="username" placeholder="Enter Your Name">
-
-                <h5>Enter Your Body Infrmation</h5>
-
-                <div class="row">
-                  
-                        <div class="col-md-4">
-                          <label>Feet:</label>
-                          <input type="number" name="feet" placeholder="feet">
-                          <span class="text-danger"><?php echo $nameErr??"" ?></span>
-                        </div>
-
-                        <div class="col-md-4">
-                          <label>Inches:</label>
-                              <input type="number" name="inches" placeholder="inches">
-                        </div>
-
-                        <div class="col-md-4">
-                          <label>Weight:</label>
-                              <input type="number" name="weight" placeholder="KG">
-                        </div>
-                        <input class="mt-3" type="submit" value="submit" name="submit">
-                       
-
-                </div>
-            </form>
-        </div>
-                          
-      <div class="col-md-6">
-
-       <?php
-
-
-        echo $name."Your BMI iS :  ";
-        echo $bmi."<br/>";
-
-
-
-        ?>
-
-        </div>
-   </div>
-
-  
-
-</div>
-
-  <?php  
+ <?php  
 
 
      if(isset($_POST['submit'])){
@@ -143,14 +80,68 @@
 		        }
 
      }
-      
 
-
-        
-
-     
-  
   ?>
+<div class="container">
+
+   <h1> Body Mass Index (BMI)</h1>
+
+   <div class="row">
+
+
+
+      <div class="col-md-6 ">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"  method="post" >
+
+                <label for="uname">Username:</label>
+                <input type="tex" name="username" placeholder="Enter Your Name">
+
+                <h5>Enter Your Body Infrmation</h5>
+
+                <div class="row">
+                  
+                        <div class="col-md-4">
+                          <label>Feet:</label>
+                          <input type="number" name="feet" placeholder="feet">
+                          <span class="text-danger"><?php echo $nameErr??"" ?></span>
+                        </div>
+
+                        <div class="col-md-4">
+                          <label>Inches:</label>
+                              <input type="number" name="inches" placeholder="inches">
+                        </div>
+
+                        <div class="col-md-4">
+                          <label>Weight:</label>
+                              <input type="number" name="weight" placeholder="KG">
+                        </div>
+                        <input class="mt-3" type="submit" value="submit" name="submit">
+                       
+
+                </div>
+            </form>
+        </div>
+                          
+      <div class="col-md-6">
+
+       <?php
+
+
+        echo $name."Your BMI iS";
+        echo $bmi."<br/>";
+
+
+
+        ?>
+
+        </div>
+   </div>
+
+  
+
+</div>
+
+
 
 
 
