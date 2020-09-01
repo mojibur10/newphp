@@ -1,0 +1,25 @@
+body{
+    background: rgba(128, 45, 86, 0.5);
+}
+
+
+
+.col-md-6{
+/* text-decoration-style: solid; */
+text-decoration-color: blue;
+/* margin-right: 1px; */
+margin-top: 5px;
+
+}
+.row{
+    color: cornsilk;
+    background: rgba(40, 9, 179, 0.534);
+    margin-top: 10px;
+
+}
+.footer{
+    text-align: center;
+    background: rgba(20, 221, 63, 0.562);
+    color: cornsilk;
+    margin-top: 10px;
+}
